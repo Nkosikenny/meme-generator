@@ -1,7 +1,15 @@
+import memesData from "./memesData"
+
 export default function Meme() {
+    function handleClickBtn(){
+        console.log("You clicked meme button");
+        console.log(memesData.data.memes.url);
+
+
+    }
     return (
         <main>
-            <form className="form">
+            <div className="form">
                 <div>
                     <label htmlFor="top-text">Top Text</label>
                     <input
@@ -22,10 +30,11 @@ export default function Meme() {
                 </div>
                 <button
                     className="form--button"
+                    onClick={handleClickBtn}
                 >
                     Get a new meme image 🖼
                 </button>
-            </form>
+            </div>
         </main>
     )
 }
